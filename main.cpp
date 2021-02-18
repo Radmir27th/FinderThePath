@@ -1,4 +1,4 @@
-//Project: "Нахождение пути в лабиринте"
+//Project: "ГЌГ ГµГ®Г¦Г¤ГҐГ­ГЁГҐ ГЇГіГІГЁ Гў Г«Г ГЎГЁГ°ГЁГ­ГІГҐ"
 //Author: Who doesn't know how to code (Radmir)
 //Start coding: 05.02.2021
 //End coding, but not completed : 12.02.2021
@@ -33,14 +33,14 @@ struct coor
 	int x;
 	int y;
 };
-std::vector<coor> queue; // Очередь графа
-std::vector<coor>theWay; // Для храниения кратчайшего пути 
+std::vector<coor> queue; // ГЋГ·ГҐГ°ГҐГ¤Гј ГЈГ°Г ГґГ 
+std::vector<coor>theWay; // Г„Г«Гї ГµГ°Г Г­ГЁГҐГ­ГЁГї ГЄГ°Г ГІГ·Г Г©ГёГҐГЈГ® ГЇГіГІГЁ 
 
 bool isPressed = false;
 bool found = false;
 bool some = false;
 
-// Алгоритм Дейикстры
+// ГЂГ«ГЈГ®Г°ГЁГІГ¬ Г„ГҐГ©ГЁГЄГ±ГІГ°Г»
 
 
 void searchDijkstra(int &x, int &y, std::vector<std::vector <cell>> &grid1)
@@ -164,9 +164,9 @@ void manip(CircleShape &tri, RectangleShape &rect, std::vector<std::vector <cell
 
 int main() {
 	
-	ContextSettings settings; // сглаживание
+	ContextSettings settings; // Г±ГЈГ«Г Г¦ГЁГўГ Г­ГЁГҐ
 	settings.antialiasingLevel = 8;
-	RenderWindow window(VideoMode(1500, 900), "Maze");// Объект, главное окно приложения
+	RenderWindow window(VideoMode(1500, 900), "Maze");// ГЋГЎГєГҐГЄГІ, ГЈГ«Г ГўГ­Г®ГҐ Г®ГЄГ­Г® ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГї
 ;
 
 	RectangleShape rect;
@@ -179,15 +179,15 @@ int main() {
 	tri.setFillColor(Color::Black);
 	tri.setPosition(rect.getSize().x * 20 + 3, rect.getSize().y * 10 - 15);
 
-	enum // Режим настройки 
+	enum // ГђГҐГ¦ГЁГ¬ Г­Г Г±ГІГ°Г®Г©ГЄГЁ 
 	{
-		AIM, // Цель 
-		MAZE, // Стены лабиринта
- 		BEGIN, // Точка с которой начнется поиск
-		SEARCH, // Режим поиска
+		AIM, // Г–ГҐГ«Гј 
+		MAZE, // Г‘ГІГҐГ­Г» Г«Г ГЎГЁГ°ГЁГ­ГІГ 
+ 		BEGIN, // Г’Г®Г·ГЄГ  Г± ГЄГ®ГІГ®Г°Г®Г© Г­Г Г·Г­ГҐГІГ±Гї ГЇГ®ГЁГ±ГЄ
+		SEARCH, // ГђГҐГ¦ГЁГ¬ ГЇГ®ГЁГ±ГЄГ 
 		END
 	} 
-	mode = MAZE; // Начинаем с настройки цели
+	mode = MAZE; // ГЌГ Г·ГЁГ­Г ГҐГ¬ Г± Г­Г Г±ГІГ°Г®Г©ГЄГЁ Г¶ГҐГ«ГЁ
 
 	CircleShape aim(10);
 	aim.setFillColor(Color::Black);
