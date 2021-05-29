@@ -1,5 +1,5 @@
 # FinderThePath
-I'll tell you in advance that I'm not good at English and even more in progamming.
+I'll tell you in advance that I'm not good at English.
 
 What the programm does:
 0) Finds the path from start node to aim node by using Dijkstra's algorithm.
